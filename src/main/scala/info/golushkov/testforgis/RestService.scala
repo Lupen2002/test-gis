@@ -1,19 +1,12 @@
 package info.golushkov.testforgis
 
 import akka.actor._
-import akka.actor.Actor.Receive
 import akka.util.Timeout
 import info.golushkov.testforgis.aktors.{GisSearch, TwoGisActor}
-import spray.http.HttpEntity
-
-import spray.http.HttpMethods._
-import spray.http._
 import spray.routing.HttpService
 
-import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.language.postfixOps
-import scala.util.Success
-import akka.pattern.{ask, pipe}
+import akka.pattern.ask
 
 import scala.concurrent.duration._
 import scala.language.postfixOps

@@ -1,22 +1,15 @@
 package info.golushkov.testforgis
 
-import akka.actor.{Props, ActorSystem}
+import akka.actor.{ActorSystem, Props}
 import akka.io.IO
+import akka.pattern.ask
 import akka.util.Timeout
 import spray.can.Http
 
-import scala.concurrent.{Future, Await}
 import scala.concurrent.duration._
 import scala.language.postfixOps
 
-import akka.pattern.ask
-import scala.concurrent.ExecutionContext.Implicits.global
-
 object Boot extends App {
-  for{
-    a <- Future{Seq("")}
-    b <- Future{Seq("")}
-  } yield a ++ b
 
   implicit val timeout = Timeout(5 seconds)
 
